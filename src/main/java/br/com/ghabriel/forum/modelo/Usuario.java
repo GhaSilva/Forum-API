@@ -1,16 +1,19 @@
-package br.com.alura.forum.modelo;
+package br.com.ghabriel.forum.modelo;
 
-public class Curso {
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
+@Entity
+public class Usuario {
+	
+	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String nome;
-	private String categoria;
+	private String email;
+	private String senha;
 
-	public Curso(String nome, String categoria) {
-		this.nome = nome;
-		this.categoria = categoria;
-	}
-	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -27,7 +30,7 @@ public class Curso {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Curso other = (Curso) obj;
+		Usuario other = (Usuario) obj;
 		if (id == null) {
 			if (other.id != null)
 				return false;
@@ -52,12 +55,20 @@ public class Curso {
 		this.nome = nome;
 	}
 
-	public String getCategoria() {
-		return categoria;
+	public String getEmail() {
+		return email;
 	}
 
-	public void setCategoria(String categoria) {
-		this.categoria = categoria;
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getSenha() {
+		return senha;
+	}
+
+	public void setSenha(String senha) {
+		this.senha = senha;
 	}
 
 }
