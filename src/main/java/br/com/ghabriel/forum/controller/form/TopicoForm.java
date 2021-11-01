@@ -1,13 +1,17 @@
 package br.com.ghabriel.forum.controller.form;
 
+
+
 import br.com.ghabriel.forum.modelo.Curso;
 import br.com.ghabriel.forum.modelo.Topico;
 import br.com.ghabriel.forum.repository.CursoRepository;
-import br.com.ghabriel.forum.repository.TopicoRepository;
 
 public class TopicoForm {
+	
 	private String titulo;
+	
 	private String mensagem;
+	
 	private String nomeCurso;
 	
 	
