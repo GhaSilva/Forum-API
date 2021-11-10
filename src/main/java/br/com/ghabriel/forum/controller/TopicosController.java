@@ -2,8 +2,8 @@ package br.com.ghabriel.forum.controller;
 
 import java.net.URI;
 import java.util.Optional;
-import javax.transaction.Transactional;
 
+import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheEvict;
